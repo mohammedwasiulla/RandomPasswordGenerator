@@ -1,0 +1,192 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container with Glassmorphism */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Applies the blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #FFD700; /* Accent color for the heading */
+    letter-spacing: 1px;
+}
+
+/* Output Box with Glassmorphism */
+.output-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari Support */
+}
+
+/* Password Input */
+#password {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 1.2em;
+    width: 85%;
+    outline: none;
+    text-align: center;
+}
+
+/* Copy Button */
+#copy-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#copy-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Options Section */
+.options {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+/* Password Length Input */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Generate Button */
+#generate-btn {
+    width: 100%;
+    padding: 12px;
+    background: #28A745;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#generate-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #generate-btn,
+    #copy-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
+
+/* AI-like message style */
+.message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-100%);
+    opacity: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.message.success {
+    background-color: #28A745;
+}
+
+.message.error {
+    background-color: #DC3545;
+}
+
+/* Smooth animation for AI message */
+.message.success,
+.message.error {
+    transform: translateX(-50%);
+    opacity: 1;
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

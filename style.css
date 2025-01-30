@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: url('background.jpeg') no-repeat center center/cover; /* Responsive Background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Container with Glassmorphism */
+.welcome-container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 450px; /* Increased max width for better desktop layout */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.2em;
+    color: #FFD700; /* Gold color */
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Start Button */
+#go-to-stopwatch {
+    padding: 12px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    background: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#go-to-stopwatch:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .welcome-container {
+        width: 90%;
+        max-width: 380px;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    #go-to-stopwatch {
+        font-size: 1.1em;
+        padding: 10px 18px;
+    }
+}
+
+/* Responsive Design for Small Mobile Devices */
+@media (max-width: 480px) {
+    .welcome-container {
+        width: 95%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #go-to-stopwatch {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔑 Password Generator</h1>
+
+        <!-- Output Box -->
+        <div class="output-box">
+            <input type="text" id="password" readonly>
+            <button id="copy-btn">Copy</button>
+        </div>
+
+        <!-- Options Section -->
+        <div class="options">
+            <label>
+                Password Length:
+                <input type="number" id="length" min="4" max="50" value="12">
+            </label>
+            
+            <label>
+                <input type="checkbox" id="lowercase" checked> Include Lowercase (a-z)
+            </label>
+            <label>
+                <input type="checkbox" id="uppercase" checked> Include Uppercase (A-Z)
+            </label>
+            <label>
+                <input type="checkbox" id="numbers" checked> Include Numbers (0-9)
+            </label>
+            <label>
+                <input type="checkbox" id="symbols"> Include Symbols (!@#$%)
+            </label>
+        </div>
+
+        <!-- Generate Button -->
+        <button id="generate-btn">Generate Password</button>
+
+        <!-- AI-Style Message Display Box -->
+        <div id="message-box"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>

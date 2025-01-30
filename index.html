@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quick Password Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>🔑 Welcome to Quick Password Generator</h1>
+        <p>Click the button below to start your process</p>
+        <button id="go-to-stopwatch">Start</button>
+    </div>
+
+    <script>
+        // Ensure it stays on the welcome page after reload
+        window.onload = () => {
+            if (sessionStorage.getItem('visited')) {
+                window.location.href = 'index1.html';  // Redirect after first visit
+            }
+        }
+
+        // Handle button click event
+        document.getElementById('go-to-stopwatch').onclick = function() {
+            sessionStorage.setItem('visited', true);  // Store the visited status
+            window.location.href = 'index1.html';  // Redirect to main page
+        }
+    </script>
+</body>
+</html>
